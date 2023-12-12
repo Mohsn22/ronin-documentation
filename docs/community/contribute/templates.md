@@ -5,24 +5,13 @@ toc_min_heading_level: 2
 toc_max_heading_level: 2
 ---
 
-You can copy any of these templates into a new Markdown file as the first step
-in creating a new page and opening a pull request (PR):
+## Overview
 
-- [Headers](#headers)
-- [Title metadata](#title-metadata)
-- [Concept](#concept)
-- [Task](#task)
-- [Reference](#reference)
-- [Troubleshooting](#troubleshooting)
-  - [Introductory topic](#introductory-topic)
-  - [Troubleshooting task](#troubleshooting-task)
-  - [Troubleshooting reference](#troubleshooting-reference)
-- [Quickstart](#quickstart)
-- [Tutorial](#tutorial)
+This reference page contains a list of Markdown templates that you can use when contributing to the [Ronin chain documentation](https://docs.roninchain.com). Just copy any template into a new Markdown file as the first step in creating a new page and [opening a new pull request](./../../CONTRIBUTING.md#work-with-a-pull-request) (PR).
 
 ## Headers
 
-In the templates, H2 header is a top-level header. Do not use  always reserved for the title of the page:
+In the templates, H2 header is a top-level header. Do not use H1 headers.
 
 ```markdown
 ---
@@ -38,36 +27,29 @@ Content
 Content
 ```
 
-For sections headers, use H2 and lower levels, and don't skip levels (for
-example, don't use H2 then H4).
+Don't skip levels (for example, don't use H2 then H4).
 
 ## Title metadata
 
-All the templates contain the `title` metadata attribute. By default, Docusaurus
-generates a page title from the H1 header at the top of the page. But sometimes
+All the templates contain the `title` front matter attribute. But sometimes
 the title can get so long it gets truncated in the sidebar. To prevent that, you
-can give the page a shorter, mode sidebar-friendly title by using the `title`
-metadata. Another reason is the page title might not be consistent with other
-pages in a section. You can again edit the title metadata to achieve
-consistency.
-
-Example when no `title` is used:
+can give the page a shorter, mode sidebar-friendly title by using the `sidebar_label`
+front matter.
 
 ```markdown
-# Security hardening for your validator node
+title: Security hardening for your validator node
 ```
 
-Example with a shorter title defined in the `title` metadata:
+Example with a shorter title defined in the `sidebar_label` attribute:
 
 ```markdown
 ---
-title: Security hardening
+sidebar_label: Security hardening
+title: Security hardening for your validator node
 ---
-
-# Security hardening for your validator node
 ```
 
-## Concept
+## Explanation
 
 ```markdown
 ---
@@ -75,14 +57,13 @@ title: Noun or noun phrase
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Concept section header
+## Overview
 
-<!-- Write one or two paragraphs about the main idea of the topic, as a summary. Add diagrams if necessary. -->
+<!-- Summarize what this explanation is about. -->
 
-## Another concept section header
+## Explanation topic
 
-<!-- An optional section for you to write one or two paragraphs about another element of the topic.
-Keep adding more sections to describe all elements of the topic until you've completed the article. -->
+<!-- Write one or two paragraphs about the main idea of the topic, as a summary. Add diagrams if necessary. Keep adding more sections to describe all elements of the topic until you've completed the article. -->
 
 ## See also
 
@@ -90,13 +71,13 @@ Keep adding more sections to describe all elements of the topic until you've com
 can read to reinforce the understanding of the information covered
 in this topic. -->
 
-- [Page title](Page URL)
+* [Page title](Page URL)
 ```
 
-For guidelines on writing concept topics, see
-[Content model](./../../CONTRIBUTING.md#concept).
+For guidelines on writing explanation topics, see
+[Explanation guidelines](./../../CONTRIBUTING.md#explanation-guidelines).
 
-## Task
+## How-to guide
 
 ```markdown
 ---
@@ -104,29 +85,31 @@ title: Start with a verb
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Task section header
+## Overview
 
-<!-- Include prerequisite information or specific permissions information here.
-Then write procedural steps following the instructions in
+<!-- Briefly describe the outcome of the how-to and optionally, what the user should be
+able to do after completing the steps. -->
+
+## Before you start
+
+<!-- An optional section to include prerequisite information or specific permissions information. -->
+
+## Task name
+
+<!-- Write procedural steps following the instructions in
 https://developers.google.com/style/procedures. -->
 
-## Another task section header
-
-<!-- An optional section for you to write one or two paragraphs about another element of the topic.
-Keep adding more sections to describe all elements of the topic until you've completed the article. -->
-
-## Further reading
+## See also
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
 in this topic. -->
 
-- [Page title](Page URL)
-
+* [Page title](Page URL)
 ```
 
 For guidelines on writing task topics, see
-[Content model](./../../CONTRIBUTING.md#task).
+[How-to guide guidelines](./../../CONTRIBUTING.md#how-to-guide-guidelines).
 
 ## Reference
 
@@ -136,29 +119,26 @@ title: Use nouns to describe the topic
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Reference section header
+## Overview
 
-<!-- Write one or two paragraphs about the main idea of the topic, as a summary.
-Add bulleted lists and tables if necessary.
-For instructions, refer to
+<!-- An optional section to briefly describe the main idea of the page. -->
+
+## Reference entry
+
+<!-- A table or other structured presentation of entries. For instructions, refer to
 https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
 
-## Another reference section header
-
-<!-- An optional section for you to write one or two paragraphs about another element of the topic.
-Keep adding more sections to describe all elements of the topic until you've completed the article. -->
-
-## Further reading
+## See also
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
 in this topic. -->
 
-- [Page title](Page URL)
+* [Page title](Page URL)
 ```
 
 For guidelines on writing reference topics, see
-[Content model](./../../CONTRIBUTING.md#reference).
+[Reference guidelines](./../../CONTRIBUTING.md#reference-guidelines).
 
 ## Troubleshooting
 
@@ -170,7 +150,7 @@ For guidelines on writing reference topics, see
 When working with <feature>, you might encounter the following issues:
 ```
 
-### Troubleshooting task
+### Troubleshooting how-to
 
 ```markdown
 ---
@@ -178,27 +158,25 @@ title: Start with a verb related to resolving the error
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Task section header
+## Overview
 
-<!-- Write one or two paragraphs to clarify the audience, what the error is
-and when it occurs. For example: "You might get an error that states
-<error message>. This error occurs when ..."
+<!-- An optional section to briefly describe the main idea of the page. -->
+
+## Symptom name
+
+<!-- Describe the symptom here. For example, give the text of the error message or describe the performance issue the user might experience: "You might get an error that states
+{error message}. This error occurs when {situation}."
 Include prerequisite information or specific permissions information here.
 Then write procedural steps following the instructions in
 https://developers.google.com/style/procedures. -->
 
-## Another task section header
-
-<!-- An optional section for you to write one or two paragraphs about another element of the topic.
-Keep adding more sections to describe all elements of the topic until you've completed the article. -->
-
-## Further reading
+## See also
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered
 in this topic. -->
 
-- [Page title](Page URL)
+* [Page title](Page URL)
 ```
 
 ### Troubleshooting reference
@@ -209,30 +187,28 @@ title: Use nouns to describe the topic
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Reference section header
+## Overview
 
-<!-- Write one or two paragraphs about the main idea of the topic, as a summary.
-For instructions, refer to
-https://github.com/axieinfinity/ronin-documentation/blob/main/docs/CONTRIBUTING.md#reference. -->
+<!-- An optional section to summarize what the entries on the page have in common. -->
 
-### Error message section header
+## Subset of errors
+
+### Error message or error description
 
 <!-- Write the section title as the error message or its description.
 Use the following structure to describe the error:
 
-"You might get an error that states <error message>.
+"You might get an error that states {error message}.
 
-This error occurs when <situation>.
+This error occurs when {situation}.
 
-To resolve, <action>." -->
-
-### Another error message section header
+To resolve, {action}." -->
 
 <!-- Keep adding sections until you've mentioned all errors. -->
 ```
 
 For guidelines on writing troubleshooting topics, see
-[Content model](./../../CONTRIBUTING.md#troubleshooting).
+[Troubleshooting guidelines](./../../CONTRIBUTING.md#troubleshooting-guidelines).
 
 ## Quickstart
 
@@ -242,7 +218,7 @@ title: Quickstart title
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Introduction
+## Overview
 
 <!-- Build on the description above by doing the following:
 - Clarifying the audience.
@@ -260,10 +236,6 @@ description: Write a brief intro to give readers a quick understanding of what's
 <!-- A step may require the user to perform several tasks - break those tasks down into chunks, allowing the user to scan quickly to find their place if they navigated away from this screen to perform the task. Write the steps of the task following the instructions in
 https://developers.google.com/style/procedures. -->
 
-### Another task section
-
-<!-- Remove all of these comments when you're done. -->
-
 ## Step 2: Do the next thing
 
 <!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
@@ -271,11 +243,11 @@ https://developers.google.com/style/procedures. -->
 
 ## Next steps
 
-<!-- Provide a quick recap of what has been accomplished in the quick start as a means of transitioning to the next step. Include two-three actionable next steps that the user take after completing the quickstart. Always link to a concept related to this product. -->
+<!-- Provide a quick recap of what has been accomplished in the quickstart as a means of transitioning to the next step. Include two-three actionable next steps that the user take after completing the quickstart. Always link to a concept related to this product. -->
 ```
 
 For guidelines on writing quickstarts, see
-[Content model](./../../CONTRIBUTING.md#quickstart).
+[Quickstart guidelines](./../../CONTRIBUTING.md#quickstart-guidelines).
 
 ## Tutorial
 
@@ -285,9 +257,9 @@ title: Start with a verb
 description: Write a brief intro to give readers a quick understanding of what's in the document so they can decide if it's relevant to them.
 ---
 
-## Introduction
+## Overview
 
-<!-- The tutorial introduction should include the following in a short paragraph:
+<!-- The tutorial overview should include the following in a short paragraph:
 
 - Clarify audience.
 - State prerequisites and prior knowledge needed.
@@ -305,16 +277,12 @@ description: Write a brief intro to give readers a quick understanding of what's
 <!-- A step may require the user to perform several tasks - break those tasks down into chunks, allowing the user to scan quickly to find their place if they navigated away from this screen to perform the task. Write the steps of the task following the instructions in
 https://developers.google.com/style/procedures. -->
 
-### Another task section
-
-<!-- Remove all of these comments when you're done. -->
-
 ## Step 2: Do the next thing
 
 <!-- Rinse and repeat, adding steps and tasks until the tutorial is complete. -->
 <!-- Remember to show code snippets in context. -->
 
-## Further reading
+## See also
 
 <!-- An optional section that can contain links to other content that the user
 can read to reinforce the understanding of the information covered in
@@ -325,4 +293,4 @@ this tutorial. -->
 ```
 
 For guidelines on writing tutorials, see
-[Content model](./../../CONTRIBUTING.md#tutorial).
+[Tutorial guidelines](./../../CONTRIBUTING.md#tutorial-guidelines).

@@ -6,7 +6,7 @@ toc_max_heading_level: 2
 slug: 'community/contribute/guide'
 ---
 
-## Welcome to the contribution guide
+## Overview
 
 Thank you for your interest in contributing to the Ronin documentation project. Any contribution you make will be visible on [docs.roninchain.com](https://docs.roninchain.com).
 
@@ -43,7 +43,7 @@ Contributions](https://github.com/firstcontributions/first-contributions) guide.
 You can contribute to Ronin documentation in a few ways:
 
 * Open an issue in the
-  [repository](https://github.com/axieinfinity/ronin-document) if you noticed
+  [repository](https://github.com/axieinfinity/ronin-documentation) if you noticed
   something that needs updating.
 * Discuss the documentation and other things Ronin on our Discord server.
 * Make changes to existing content and write new content through pull requests.
@@ -118,7 +118,7 @@ create a working branch and submit a pull request.
 
 ### Work with a pull request
 
-After you're done with the changes, create a PR:
+After you're done with the changes, create a pull request (PR):
 
 * Write the title for the PR following the [naming convention](#naming-conventions).
 * Fill out the PR template so that Ronin maintainers can review your PR.
@@ -127,10 +127,10 @@ After you're done with the changes, create a PR:
 * Maintainers may ask you to make changes before a PR can be merged, either as suggested changes or PR comments.
 * As you address maintainers' feedback, mark each item as resolved.
 
-### Next step
+### Next steps
 
 After you address feedback from maintainers, your PR will be merged and your contributions will be visible on [docs.roninchain.com](https://docs.roninchain.com).
-Congratulations, you're a full-blown contributor!
+Congratulations, you're a full-blown contributor.
 
 ### Naming conventions
 
@@ -153,7 +153,7 @@ When writing the `short description` part, follow these guidelines:
 
 * Don't capitalize the first letter, reserve that for proper nouns (product
   names, for example).
-* Use the imperative, present tense: "change" not "changed" nor "changes".
+* Use the imperative, present tense: "change" not "changed" nor "changes."
 * Don't add a period (.) at the end.
 
 ## Run locally
@@ -163,27 +163,26 @@ generator. To preview changes as you edit the files, you can run a local
 development server that serves the Ronin documentation site and reflects the
 latest changes:
 
-1. Clone the [Ronin documentation repository](https://github.com/axieinfinity/ronin-document)
+1. Clone the [ronin-documentation](https://github.com/axieinfinity/ronin-documentation)
    by running the following command:
 
    ```bash
-   git clone git@github.com:axieinfinity/ronin-document.git
+   git clone git@github.com:axieinfinity/ronin-documentation.git
    ```
 
-2. Install the dependencies.
-3. Navigate to the `ronin-document` directory:
+2. Navigate to the `ronin-documentation` directory:
 
    ```bash
-   cd ronin-document
+   cd ronin-documentation
    ```
 
-4. Install the project:
+3. Install the project:
 
    ```bash
    yarn install
    ```
 
-5. Start the local server:
+4. Start the local server:
 
    ```bash
    yarn start
@@ -220,19 +219,18 @@ After a PR is closed, your working branch is deleted.
 ### Directories
 
 * Content is written in Markdown files, which reside in the `/docs` directory.
-* Inside each directory is an `assets` directory where screenshots and diagrams
-  are stored.
+* Screenshots and diagrams are stored in `assets` directories throughout the `/docs` folder.
 * Markdown files contain [front matter](https://docusaurus.io/docs/next/create-doc#doc-front-matter).
-* The files in the `/docs` directory are further organized by category as
+* The files in the `/docs` are further organized by category as
   described in the following table:
 
 | Directory              | Purpose                                                                                                         |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `/docs/apps`         | Documentation for dApps within the Ronin ecosystem.                                                                                |
 | `/docs/basics`         | General information about Ronin.                                                                                |
+| `/docs/bridge-operators` | Documentation for bridge operators.                                                                               |
 | `/docs/community`      | Ronin socials, contribution guide, and community initiatives.                                                   |
 | `/docs/delegators`     | Documentation for delegators.                                                                                   |
-| `/docs/developers`     | A page that points to the Ronin developer documentation published on the Sky Mavis developer documentation hub. |
-| `/docs/node-operators` | Documentation for node operators.                                                                               |
 | `/docs/validators`     | Documentation for validators.                                                                                   |
 
 ### Sidebar
@@ -246,7 +244,7 @@ the following:
   buttons.
 
 The contents of the sidebar are defined in the `/sidebar.js` file. Every page
-you're writing must be added to the sidebar.
+must be added to the sidebar.
 
 ### Homepage
 
@@ -281,9 +279,9 @@ Documentation is organized into multiple levels of hierarchy on the site:
 
 #### Homepage content
 
-The Ronin documentation homepage,
-[docs.roninchain.com](https://docs.roninchain.com) includes cards linked to all
-the top-level categories to help people find information about the Ronin feature
+The homepage [docs.roninchain.com](https://docs.roninchain.com)
+includes cards linked to all the top-level categories to help
+people find information about the Ronin feature
 that they want to use.
 
 The space on the homepage is limited, so we have to carefully consider what goes
@@ -299,7 +297,7 @@ homepage.
 
 #### Top-level category
 
-Top-level categories are organized a Ronin audience type—delegators, validators,
+Top-level categories are organized around Ronin audience types—delegators, validators,
 node operators, developers, and user intention—basics (to learn) and community
 (to get involved). All top-level categories appear on the homepage. You should
 only create a top-level category when there is a large amount of content to be
@@ -307,14 +305,12 @@ contained in it and the content is broken down into multiple nested categories.
 If the content can fit in any existing top-level category, it should belong in
 that existing top-level category.
 
-* Top-level categories are equally important to one another, except for
-  [Developers](./developers/portal.mdx), which contains only one page.
-* Most top-level categories have an auto-generated layout with a brief
-  introduction at the top and the list of doc cards that represent the
-  categories and pages inside that top-level category. There are exceptions,
-  however. For example, the [Node operators](./node-operators/index.mdx) category is a
-  manually written page, where doc cards are displayed using a custom helper,
-  and organized into sections using headings.
+Most top-level categories have an auto-generated layout with a brief
+introduction at the top and the list of doc cards that represent the
+categories and pages inside that top-level category. There are exceptions,
+however. For example, the [Validators](./validators/index.mdx) category is a
+manually written page, where doc cards are displayed using a custom helper,
+and organized into sections using headings.
 
 #### Category
 
@@ -348,13 +344,22 @@ Example:
 ```markdown
 ---
 description: Hardware recommendations and methods of installation.
-title: Before you start
+slug: '/get-started'
+sidebar_label: Get started
+title: Get started as a developer
 ---
 ```
 
-The `title` attribute replaces the title of the page derived from the H1 header.
-The `description` attribute is rendered underneath the page title on a
-[doc card](https://docusaurus.io/docs/sidebar/items#embedding-generated-index-in-doc-page).
+Definitions:
+
+* `description` is used in the head metadata and on the
+  [doc card](https://docusaurus.io/docs/sidebar/items#embedding-generated-index-in-doc-page).
+* `slug` is used to customize the URL of the page. If no slug is specified, the page's URL location is its file path relative to the `/docs` folder.
+* `sidebar_label` defines the text shown in the sidebar for this page. For example, if your page's title is too long to fit in the sidebar, you can write a shorter title using the `sidebar_label` metadata.
+* `title` sets the title of the page.
+
+These are just a few of the available front matter attributes.
+For a full list, see [Markdown front matter](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter).
 
 #### Sidebar
 
@@ -378,8 +383,8 @@ page, and generally to structure the documentation in a discoverable way.
 We organize content predictably within top-level categories, regular categories,
 and pages, from broadest applicability to most specific, following this order:
 
-* Concepts (what a feature is).
-* Task (how to enable a feature, how to use a feature, how to manage a feature,
+* Explanation (what a feature is).
+* How-to guide (how to enable a feature, how to use a feature, how to manage a feature,
   how to disable a feature).
 * Reference (list of related parameters, commands).
 * Troubleshooting (how to resolve issues).
@@ -390,15 +395,17 @@ Any of these content types can be shared as a page on its own, and some content
 types can also be used as topics within a larger page. We will therefore refer
 to the content types as "topics" in the following sections.
 
-#### Concept
+#### Explanation
 
-A concept topic explains background information and provides context-specific
-knowledge on a particular concept. The goal of a concept topic is to help
-readers understanding, not to teach concepts or provide steps in a task.
+##### About explanation topics
 
-A concept topic works well when:
+An explanation topic explains background information and provides context-specific
+knowledge on a particular concept. The goal of an explanation topic is to help
+readers' understanding, not to teach concepts or lay down step-by-step instructions.
 
-* It answers questions "What is this?", "Why should I use it?", "How does it
+An explanation topic works well when:
+
+* It answers questions "What is this?," "Why should I use it?," "How does it
   work?"
 * It gives context to a subject or topic that your readers might not have.
 * It provides essential facts, background, and diagrams to help your readers
@@ -408,121 +415,123 @@ A concept topic works well when:
 * It helps readers make connections between related concepts, and form a better
   understanding of the subject.
 
-*Template*
+##### Explanation template
 
-To write a concept topic, use the
-[concept template](./community/contribute/templates.md#concept).
+To write an explanation topic, use the
+[explanation](./community/contribute/templates.md#explanation) template.
 
-*Guidelines*
+##### Explanation guidelines
 
-##### Title metadata
+###### About title metadata in explanation topics
 
-To write a title for a concept topic, use a noun or a noun phrase to describe
-the subject. For example: "Rewards", "Introduction to nodes".
+To write a title for an explanation topic, use "About + noun" or "About + noun phrase," where to describe
+the subject. For example: "About events," "About data quality."
 
-##### Concept section
+###### About the "Overview" section in explanations
 
-* Write one or two paragraphs describing the main idea of the topic.
-* Structure the body of a concept topic like you would a presentation to a group
+Write one or two paragraphs describing the main idea of the topic.
+
+###### About the "Explanation topic" section
+
+* Structure the body of an explanation topic like you would a presentation to a group
   who doesn't know anything about the topic. Introduce ideas gradually, so your
   audience can grow their understanding of the topic.
-* It can be easy to blend explanations with other types of content, like tasks
+* It can be easy to blend explanations with other types of content, like how-to guides
   or references. But you should avoid doing so. Here are some tips to avoid
   mixing documentation types:
   * Avoid instructions, procedures, or any content that doesn't focus solely on
     building upon the conceptual understanding of the concept.
   * If you find yourself writing steps or describing how to do something in
-    detail in your concept topic, you need to shift your focus away from
+    detail in your explanation topic, you need to shift your focus away from
     describing the tasks, and go back to the concept. Remind yourself of the
     main goal of your topic.
 
-##### See also section
+###### About the "See also" section
 
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
 
-*Examples*
+##### Examples of explanation topics
 
-Concept pages:
-
-* [Slashing rules](./validators/slashing/slashing.mdx)
+* [Slashing rules](./validators/slashing.mdx)
 * [Rewards](./basics/rewards.md)
-* [Introduction to nodes](./node-operators/introduction.md)
+* [Nodes](./basics/nodes.md)
+* Explanation topics within another page: [Bailout](./validators/slashing.mdx#bailout)
 
-Concept topics within other pages:
+#### How-to guide
 
-* Description of the credit score system in
-  [Bailout](./validators/slashing/bailout.mdx)
+##### About how-to guides
 
-#### Task
-
-A (how-to guide, procedure) is used to explain to a user how to use a specific
-feature, accomplish a task, and to guide the user through numbered steps. Tasks
-reinforce the concepts that were explained in a [concept](#concept) page by
+A how-to guide (task, procedure) is used to guide a user how to use a specific
+feature, accomplish a task, and to walk the user through numbered steps. How-to guides
+reinforce the concepts that were explained in [explanation](#explanation) topics by
 giving one or more examples that might be useful for the users.
 
-A task works well when:
+A how-to guide works well when:
 
 * It focuses only on the task it's describing.
-* It doesn't contain conceptual or referential information—that lives elsewhere.
+* It doesn't contain explanatory or referential information—that lives elsewhere.
 * In potential points of error, it contains troubleshooting tips or links to
   troubleshooting topics where the user can seek help.
 
-*Template*
+##### How-to guide template
 
-To write a task, use the [task
-template](./community/contribute/templates.md#task).
+To write a task, use the [task](./community/contribute/templates.md#task) template.
 
-*Guidelines*
+##### How-to guide guidelines
 
-##### Title metadata
+###### About title metadata in how-to guides
 
-To write a title for a task, start with a verb. For example: "Create an
-account", "Become a validator", "Run a node". The outcome of the task should be
-clear to the user from the title alone.
+To write a title for a how-to guide, start with a verb.
+For example, "Get started," "Integrate with Ronin VRF," "Authenticate users
+with OIDC and Sky Mavis Account." The outcome of the task should be clear
+to the user from the title alone.
 
-##### Task section
+###### About the "Overview" section in how-to guides
 
-* Briefly describe the outcome of the task and optionally, what the user should be
+Briefly describe the outcome of the how-to and optionally, what the user should be
 able to do after completing the steps.
-* Explain what knowledge the user needs to have, or what configuration they must
+
+###### About the "Before you start" section
+
+Explain what knowledge the user needs to have, or what configuration they must
 complete, before starting the task. Use imperative sentences, for example, "Read
-the concept guide" or "Download and install the Ronin Wallet app".
+the explanation topic" or "Download and install the app."
+
+###### About the "task name" section
+
 * Write a step-by-step instruction to complete the task:
   * Follow the guidelines in [https://developers.google.com/style/procedures](https://developers.google.com/style/procedures).
-  * Use a single numbered list.
+  * Use numbered lists.
   * Use screenshots or graphics to assist a user in navigating a UI.
-  * Do not explain any concepts in this section. Instead, link to concept topics
-  in case a user does not know about a certain concept. For example: 'Configure
-  the server with the appropriate configuration. For more information about
-  server configurations, see "Server configuration".'
-  * Avoid giving the users multiple paths to select when working through tasks.
+  * Do not explain any concepts in this section. Instead, link to explanation topics
+  in case a user does not know about a certain concept. For example, "Configure
+  the server. For more information about configurations, see Server configuration".
+  * Avoid giving the users multiple paths to select when working through how-tos.
   When you avoid giving the user choices, your documentation should lead all
   users to the same end result.
-  * If the page is meant for beginner users, avoid adding tasks that you might
-  consider better suited for advanced users. If your document is intended for
-  advanced users, state that up front and give them a list of prerequisites
+  * If the page is meant for beginner users, avoid adding steps that you might
+  consider better suited for advanced users. If your how-to guide is intended for
+  advanced users, state that upfront and give them a list of prerequisites
   before they go through the steps.
 
-##### See also section
+###### About the "See also" section
 
 Include a bulleted list of related pages to extend the user's understanding of
 this task and the concepts that it involves.
 
-*Examples*
+##### Examples of how-to guides
 
-Task pages:
-
-* [Become a delegator](./delegators/onboarding/become-delegator.mdx)
-* [Run a validator node](./node-operators/setup/mainnet/validator.md)
-* [Claim rewards](./validators/rewards/claim.mdx)
-
-Task topics within other pages:
-
-* [Check your credit score](./validators/slashing/bailout.mdx#check-your-credit-score)
-* [Use secure communication](./node-operators/resources/security.md#use-secure-communication)
+* [Stake RON](./delegators/onboarding/become-delegator.mdx)
+* [Run a validator node](./validators/setup/mainnet/run-validator.md)
+* [Claim rewards](./validators/manage/claim-rewards.mdx)
+* Task topics within other pages:
+  * [Check your credit score](./validators/slashing.mdx#check-your-credit-score)
+  * [Use secure communication](./validators/setup/security.md#use-secure-communication)
 
 #### Reference
+
+##### About reference topics
 
 A reference topic presents information in an easily scannable format, like a
 table or list. The focus of reference topics is an information-oriented
@@ -536,30 +545,31 @@ A reference topic works well when:
 * It avoids high-level usage-instructions or description for the product as a
   whole.
 
-*Template*
+##### Reference template
 
-To write a reference topic, use the [reference
-template](./community/contribute/templates.md#reference).
+To write a reference topic, use the [reference](./community/contribute/templates.md#reference) template.
 
-*Guidelines*
+##### Reference guidelines
 
-##### Title metadata
+###### About title metadata in reference topics
 
 To write a title for a reference topic, use nouns that clearly describe the
 contents of the topic. Make sure that the title is accessible to users who are
-just getting started. For example, "Slashing rules", "Network parameters", "User
-roles".
+just getting started. For example, "Slashing rules," "Network parameters," "User
+roles."
 
-##### Reference section
+###### About the "Overview" section in reference topics
 
 Write one or two paragraphs summarizing the main idea of the topic. Explain what
 all the entries defined in the topic have in common.
+
+###### About the "Reference entry" section
 
 * The structure of reference topics varies based on what kind of information you
   are documenting. You might find it helpful to organize the contents using
   tables, lists, interactive object-schemas. For example, if you're writing a
   reference page for an API endpoint, you might define sections such as "General
-  requirements", "Request parameters", and "Responses". The format  might be
+  requirements," "Request parameters," and "Responses." The format  might be
   different for each section—"General requirements" might be a list, while
   "Request parameters" and "Responses" are tables.
 * Use the "don't repeat yourself" (DRY) method and re-use content if it's
@@ -568,29 +578,29 @@ all the entries defined in the topic have in common.
 * For consistency in longer reference pages, consider using H2 headers for each
   section, and H3 headers for subsections.
 
-##### See also section
+###### About the "See also" section in reference topics
 
 Include a bulleted list of related pages to extend the user's understanding of
 the concepts covered in this topic.
 
-*Examples*
+##### Examples of reference topics
 
-Reference pages:
-
-* [Ronin mainnet](./node-operators/resources/parameters/mainnet.md)
+* [Ronin mainnet](./validators/setup/parameters/mainnet.md)
 * [Security audits](./basics/audits.md)
-
-Reference topics within other pages:
-
-* [Command reference](./node-operators/setup/cli.md#command-reference)
-* [RON unlock schedule](./basics/tokenomics.md#ron-unlock-schedule)
+* Reference topics within other pages:
+  * [Command reference](./validators/setup/cli.md#command-reference)
+  * [RON unlock schedule](./basics/tokenomics.md#ron-unlock-schedule)
 
 #### Troubleshooting
+
+##### About troubleshooting topics
 
 A troubleshooting topic should be the final topic on a page. If a page has more
 than five troubleshooting topics, put the content on a separate page that has
 troubleshooting information exclusively. The title can be `Troubleshoot <feature>`
 and in the sidebar, you can use just the word `Troubleshoot`.
+
+##### Troubleshooting guidelines
 
 A troubleshooting topic can be one of three types:
 
@@ -608,7 +618,7 @@ The format is similar to the standard task, and the title follows the same verb
 and noun pattern, such as “Debug a Ronin node."
 
 To create this topic, use the
-[Task](./community/contribute/templates.md#troubleshooting-task) template.
+[troubleshooting task](./community/contribute/templates.md#troubleshooting-task) template.
 
 *A troubleshooting reference*
 
@@ -617,124 +627,115 @@ workarounds, consider organizing them as a table. To write a title for a
 troubleshooting reference, consider including at least a partial error message. 
 
 To create this topic, use the
-[Troubleshooting reference](./community/contribute/templates.md#troubleshooting-reference)
+[troubleshooting reference](./community/contribute/templates.md#troubleshooting-reference)
 template.
-
-#### Combined types
-
-It might be helpful to group information in context to help people accomplish a
-complex task, understand a set of related tasks, or describe an entire workflow.
-You can combine different content types on a long page to ensure all contextual
-content can be found in one place. Such a "combined page" also helps remove
-duplicate content and makes room for potential growth as more options are added
-to the product.
-
-*Guidelines*
-
-* Use concept, task, reference, and troubleshooting topics in a combined page.
-  Do not combine with quickstart or tutorials—those are distinct types not
-  suitable for combination.
-* Separate different content types with section headings, and abide by title
-  guidelines for each content type.
-* If the combined page contains a task, use a task-based title. Otherwise, use a
-  title that's broad enough to reflect all the content on the page.
-
-*Example*
-
-[Build a Ronin CLI](./node-operators/setup/cli.md)
 
 #### Tutorial
 
-Tutorials help people learn about products and solve real world problems by guiding them through the entire workflow to complete a task. Tutorials are more conversational in tone than other content. A tutorial feels like a developer-to-developer conversation while remaining accessible to readers with varied technical knowledge. Products with tutorials must already have a quickstart. For bite-sized workflows, use the quickstart model instead.
+##### About tutorials
+
+Tutorials help people learn about products and solve rea-world problems by guiding them through the entire workflow to complete a task. Tutorials are more conversational in tone than other content. A tutorial feels like a developer-to-developer conversation while remaining accessible to readers with varied technical knowledge. Products with tutorials must already have a quickstart. For bite-sized workflows, use the quickstart model instead.
 
 Tutorials are useful when someone has a basic understanding of the product and is interested in extending their understanding to solve a specific problem. Tutorials are for people who want expert advice and a detailed discussion of best practices related to their problem. Tutorials can also help people validate whether the solution is appropriate for their needs.
 
-*Template*
+##### Tutorial template
 
-To write a tutorial, use the [tutorial template](./community/contribute/templates.md#tutorial).
+To write a tutorial, use the [tutorial](./community/contribute/templates.md#tutorial) template.
 
-*Guidelines*
+##### Tutorial guidelines
 
-##### Tutorial contents
+###### About title metadata in tutorials
 
-Contents of tutorials:
-
-* Introduction
-  * Clarify audience.
-  * Clearly state prerequisites and prior knowledge needed.
-  * State what the user accomplishes or builds.
-  * Include an example of a successful project.
-  * Do not include the expected amount of time that it may take users to complete the task-this depends on the experience level of the user and can be demoralizing for beginners.
-* Task sections
-  * Based on the tutorial's audience, the steps can be less explicit and formal than those used in task content.
-    * Recommended: "From your profile, click **Settings**, and then click **Developer settings**".
-    * Not recommended: "In the upper-right corner of any page, click your profile photo, then click **Settings**. In the left sidebar, click **Developer settings**."
-  * Link to other pages or resources rather than replicating them, to avoid interrupting the flow of information in the tutorial.
-  * Give visual cues. Use code blocks and screenshots heavily to help reassure users that they're performing the correct actions.
-  * Provide real examples. Don't tell a user to "enter a commit message." Instead, give them an appropriate example commit message that matches the previous steps.
-* Troubleshooting
-  * Acknowledge what may go wrong in the task and list a few common problems readers might run into with solutions.
-* Conclusion
-  * Review what the user has accomplished or built. Refer back to the project provided in the introduction as an example of a successful project.
-* Next steps
-  * Include two-three actionable next steps that the user can take after completing the tutorial.
-
-##### Title guidelines
-
-* Follow the title guidelines for procedural articles.
+* Follow the [title guidelines](#how-to-guide) for how-to guides.
 * Don’t use "tutorial” or "guide” in the title.
+
+###### About the "Overview" section in tutorials
+
+* Clarify audience.
+* Clearly state prerequisites and prior knowledge needed.
+* State what the user accomplishes or builds.
+* Include an example of a successful project.
+* Do not include the expected amount of time that it may take users to complete the task-this depends on the experience level of the user and can be demoralizing for beginners.
+
+###### About the "Steps" section
+
+* Based on the tutorial's audience, the steps can be less explicit and formal than those used in how-to guides.
+  * Recommended: "From your profile, click **Settings**, and then click **Developer settings**".
+  * Not recommended: "In the upper-right corner of any page, click your profile photo, then click **Settings**. In the left sidebar, click **Developer settings**."
+* Link to other pages or resources rather than replicating them, to avoid interrupting the flow of information in the tutorial.
+* Give visual cues. Use code blocks and screenshots heavily to help reassure users that they're performing the correct actions.
+* Provide real examples. Don't tell a user to "enter a commit message." Instead, give them an appropriate example commit message that matches the previous steps.
+
+###### About the "Troubleshooting" section
+
+Acknowledge what may go wrong in the task and list a few common problems readers might run into with solutions.
+
+###### About the "Conclusion" section
+
+Review what the user has accomplished or built. Refer back to the project provided in the introduction as an example of a successful project.
+
+###### About the "Next steps" section
+
+Include two-three actionable next steps that the user can take after completing the tutorial.
 
 #### Quickstart
 
+##### About quickstarts
+
 Quickstarts enable a user to quickly complete a discrete, focused task by illustrating a workflow with only essential steps, in about five minutes or 600 words. Quickstarts can be used for quickly getting set up with a new tool, or for quickly completing another task. For more complex tasks, use a tutorial.
 
-Quickstarts are useful when someone already understands the feature or product and is ready to try it out. Users of quickstarts are not looking for an explanation and don't need to be convinced to use the product––they just want instructions quickly. Users who don't understand a step are willing to dig deeper in a separate doc.
+Quickstarts are useful when someone already understands the feature or product and is ready to try it out. Users of quickstarts are not looking for an explanation and don't need to be convinced to use the product-they just want instructions quickly. Users who don't understand a step are willing to dig deeper in a separate doc.
 
-*Template*
+##### Quickstart template
 
-To write a quickstart guide, use the [quickstart template](./community/contribute/templates.md#quickstart).
+To write a quickstart guide, use the [quickstart](./community/contribute/templates.md#quickstart) template.
 
-*Guidelines*
+##### Quickstart guidelines
 
-##### Contents guidelines
+###### About title metadata in quickstarts
 
-Contents of quickstarts:
+* When the guide helps someone get started with a new tool, preface the title with "Quickstart." For example, "Quickstart for Sky Mavis Account."
+* For other use cases, follow the title guidelines for procedures and omit the word "Quickstart."
 
-* Introduction
-  * Highlight that this guide is quick and to-the-point by using phrasing such as the following:
-    * Quickly add `feature` to your project.
-    * The essentials for getting started with `product`.
-  * Clarify audience.
-  * Clearly state prerequisites and prior knowledge needed.
-  * State what the user accomplishes or builds.
-* Task sections
-  * Based on the quickstart's audience, the steps can be less explicit and formal than those used in task content.
-  * Link to other pages or resources rather than replicating them, to avoid interrupting the flow of information.
-  * Give visual cues. Use code blocks and screenshots heavily to help reassure users that they're performing the correct actions.
-* Troubleshooting (optional)
-  * If it exists, link to any relevant troubleshooting content rather than including it in the document.
-* Next steps
-  * Provide a quick recap of what has been accomplished in the quick start as a means of transitioning to next steps.
-  * Include two-three actionable next steps that the user take after completing the quickstart. Always link to concepts on the feature or product.
+###### About the "Overview" section in quickstarts
 
-##### Title guidelines
+Highlight that this guide is quick and to-the-point by using phrasing such as the following:
 
-* When the guide helps someone get started with a new tool, preface the title with "Quickstart". For example, "Quickstart for Sky Mavis Account."
-* For other use cases, follow the title guidelines for procedures and omit the word "Quickstart"
+* Quickly add `feature` to your project.
+* The essentials for getting started with `product`.
+* Clarify audience.
+* Clearly state prerequisites and prior knowledge needed.
+* State what the user accomplishes or builds.
+
+###### About the "Steps" section
+
+* Based on the quickstart's audience, the steps can be less explicit and formal than those used in task content.
+* Link to other pages or resources rather than replicating them, to avoid interrupting the flow of information.
+* Give visual cues. Use code blocks and screenshots heavily to help reassure users that they're performing the correct actions.
+
+###### About the "Troubleshooting" section
+
+This is an optional section.
+
+If it exists, link to any relevant troubleshooting content rather than including it in the document.
+
+###### About the "Next steps" section
+
+* Provide a quick recap of what has been accomplished in the quick start as a means of transitioning to next steps.
+* Include two-three actionable next steps that the user take after completing the quickstart. Always link to concepts on the feature or product.
 
 ## Content style guide
 
-The Ronin documentation adheres to the [content style guide](./community/contribute/style-guide.md).
+Ronin documentation adheres to the [content style guide](./community/contribute/style-guide.md).
 
-## Documentation style checker
+## Documentation linter
 
-Ronin documentation relies on the [Vale](https://vale.sh/) linter to enforce the
+Ronin documentation uses the [Vale](https://vale.sh/) linter to enforce the
 style guide.
 
 ### Install Vale
 
-Follow the [instruction](https://vale.sh/docs/vale-cli/installation/) on the
-Vale website to install.
+Follow the [official installation instruction](https://vale.sh/docs/vale-cli/installation/).
 
 ### Run Vale
 
@@ -773,8 +774,8 @@ more text here...
 
 Ronin uses the [Google](https://github.com/errata-ai/google) style for the
 [Google developer documentation style guide](https://developers.google.com/style).
-The style definitions are located in the `/static/styles` directory,
-and the Vale config lives in `/.vale.ini`.
+The style definitions are located in the `./github/styles` directory,
+and the Vale config lives in `.vale.ini`.
 
 ## Self-review checklist
 
@@ -791,8 +792,7 @@ checklist:
   the style guide.
 * [ ] Ensure technical accuracy of the content. Try to test your tasks and run
   all commands by yourself.
-* [ ] Run [Vale](#run-vale) in your Markdown files to check adherence to the
-  [style guide](./community/contribute/style-guide.md).  
+* [ ] Run [Vale](#run-vale) to lint your Markdown files.
 * [ ] Spot and fix any grammar and spelling errors. Vale might not highlight
   those.
 * [ ] If there are any failing checks in your PR, such as broken links,

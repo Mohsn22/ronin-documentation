@@ -3,7 +3,7 @@ import React from 'react'
 import BoxTickIcon from './box-tick.svg'
 import { Card } from './Card'
 import CoinIcon from './coins.svg'
-import LaptopCodeIcon from './laptop-code.svg'
+import AppsIcon from './apps.svg'
 import ListViewIcon from './list-view.svg'
 import SignDirectionIcon from './signs-direction.svg'
 import UserShieldIcon from './user-shield.svg'
@@ -13,53 +13,53 @@ const featureList = [
     title: 'Basics',
     Icon: ListViewIcon,
     link: {
-      href: '/docs/basics',
+      href: '/basics',
       title: 'Basics',
     },
-    description: <>Learn the basics of Ronin.</>,
+    description: <>Learn the basics Ronin chain.</>,
+  },
+  {
+    title: 'dApps',
+    Icon: AppsIcon,
+    link: {
+      href: '/apps',
+      title: 'dApps',
+    },
+    description: <>Learn how to use Ronin's decentralized apps.</>,
   },
   {
     title: 'Delegators',
     Icon: CoinIcon,
     link: {
-      href: '/docs/delegators',
+      href: '/delegators',
       title: 'Delegators',
     },
-    description: <>Stake RON and delegate your stake to validators to earn rewards.</>,
+    description: <>Stake your RON tokens to validators to earn rewards.</>,
   },
   {
     title: 'Validators',
     Icon: BoxTickIcon,
     description: <>Become a validator to earn rewards and secure the network.</>,
     link: {
-      href: '/docs/validators',
+      href: '/validators',
       title: 'Validators',
     },
   },
   {
-    title: 'Node operators',
+    title: 'Bridge operators',
     Icon: SignDirectionIcon,
-    description: <>Set up and operate your Ronin nodes.</>,
+    description: <>Run a bridge operator node to earn rewards.</>,
     link: {
-      href: '/docs/node-operators',
-      title: 'Node operators',
+      href: '/bridge-operators',
+      title: 'Bridge operators',
     },
-  },
-  {
-    title: 'Developers',
-    Icon: LaptopCodeIcon,
-    link: {
-      href: '/docs/developers/portal',
-      title: 'Developers',
-    },
-    description: <>Build your decentralized application on Ronin.</>,
   },
   {
     title: 'Community',
     Icon: UserShieldIcon,
-    description: <>Join the Ronin community and stay up to date with latest news.</>,
+    description: <>Join Ronin social and discover other ways to be part of the community.</>,
     link: {
-      href: '/docs/community',
+      href: '/community/join',
       title: 'Community',
     },
   },
